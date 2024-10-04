@@ -1,0 +1,67 @@
+.contato {
+    background-color: var(--branco);
+    padding: 1em;
+}
+
+.contato__titulo,
+.contato__texto {
+    background: var(--azul-degrade);
+    /* --webkit para a certez que vai funcionar em todos os navegadores */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* este de baixo faz com que a cor degrade se aplique somente ao texto */
+    background-clip: text;
+}
+
+.contato__titulo {
+    font-size: 18px;
+    font-weight: 500;
+}
+.contato__texto {
+    font-weight: 300;
+    margin: 1em 0;
+}
+
+.contato__email {
+    padding: 1em;
+    border: 1px solid var(--azul);
+    border-radius: 4px;
+    width: 94%;
+    color: var(--azul);
+}
+
+.contato__email::placeholder {
+    padding-left: 3em;
+    /* tem que por a fonte novamente apesar de já estar no body a fonte especificada */
+    font-family: var(--fonte-pricipal);
+    color: var(--azul);
+    background: url("../img/Email.svg") no-repeat;
+    /* fez aparecer a img do email */
+    background-position: left;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .contato {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .contato__titulo {
+        font-size: 24px;
+    }
+    .contato__descricao {
+        margin-right: 1em;
+        /* para quebrar a linha */
+        width: 30%;
+    }
+    .contato__email {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1728px) {
+    .contato {
+        padding: 3em 20vw;
+    }
+}
